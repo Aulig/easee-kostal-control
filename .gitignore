@@ -1,0 +1,6 @@
+# don't commit your authentication details!
+/authentication.py
+# download it from the original repo
+/kostalplenticore.py
+
+/.idea
