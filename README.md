@@ -1,3 +1,8 @@
+# What is this?
+
+A python script you can run to automatically stop and resume charging your electric vehicle depending on whether your photovoltaic system is producing power at the moment.
+It checks Kostal plenticore systems to control easee charging boxes.
+
 # Setup
 
 - Download [kostalplenticorepy](https://github.com/ITTV-tools/kostalplenticorepy) as `kostalplenticore.py` (from the src folder of that repository)
@@ -7,3 +12,5 @@
   - kostal_password = "Your kostal password"
   - easee_user = "Your easee username (phone number or email)"
   - easee_password = "Your easee password"
+- Update the `check_every_minutes` and `min_watt_to_charge` parameters in `main.py` if you'd like. (See the comments in that file for an explanation of the parameters)
+- Run `python main.py`
