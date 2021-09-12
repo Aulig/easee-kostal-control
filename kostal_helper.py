@@ -2,17 +2,10 @@
 import kostalplenticore
 from authentication import kostal_ip, kostal_password
 
-kostal = None
-
-
-def setup():
-    global kostal
-    kostal = kostalplenticore.connect(kostal_ip, kostal_password)
-    kostal.login()
-
 
 def get_pv_output():
-    current_pv_output = kostal.getPvPower()
-    print(f"Current PV output: {current_pv_output}")
-
-    return current_pv_output
+    # not sure if kostal automatically refreshes sessions when they expire, so setup every time
+    # also prevents potential threading issues
+    kostal = kostalplenticore.connect(kostal_ip, kostal_password)
+    kostal.login()
+    return kostal.getPvPower()
