@@ -4,9 +4,9 @@ A python script you can run to automatically stop and resume charging your elect
 It checks Kostal plenticore systems to control easee charging boxes.
 
 # Setup
-
+- Clone this repo
 - Download [kostalplenticorepy](https://github.com/ITTV-tools/kostalplenticorepy) as `kostalplenticore.py` (from the src folder of that repository)
-- Run `pip install requirements.txt`
+- Run `pip install -r requirements.txt`
 - Create `authentication.py` with these variables:
   - kostal_ip = "Your kostal IP (without http)"
   - kostal_password = "Your kostal password"
