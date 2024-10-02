@@ -6,6 +6,8 @@ It checks Kostal plenticore systems to control easee charging boxes.
 # Setup
 - Clone this repo
 - Download [kostalplenticorepy](https://github.com/ITTV-tools/kostalplenticorepy) as `kostalplenticore.py` (from the src folder of that repository)
+- `python -m venv venv`
+- `source venv/bin/activate`
 - Run `pip install -r requirements.txt`
 - Create `authentication.py` with these variables:
   - kostal_ip = "Your kostal IP (without http)"
@@ -25,7 +27,7 @@ It checks Kostal plenticore systems to control easee charging boxes.
   
           [Service]
           Type=simple
-          ExecStart=/usr/bin/python3 /home/aulig/easee-kostal-control/main.py
+          ExecStart=/home/aulig/easee-kostal-control/venv/bin/python3 /home/aulig/easee-kostal-control/main.py
           WorkingDirectory=/home/aulig/easee-kostal-control
           User=aulig
           StandardOutput=append:/home/aulig/easee-kostal-control/systemdexecution.log
